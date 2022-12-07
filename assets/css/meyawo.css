@@ -12235,7 +12235,7 @@ pre .code {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
   }
   .about-img-holder {
     max-width: 220px;
@@ -12243,6 +12243,9 @@ pre .code {
     width: 100%;
     margin: auto;
     margin-bottom: 20px;
+  }
+  .about-caption .row {
+    justify-content: center;
   }
 }
 
@@ -12271,4 +12274,26 @@ pre .code {
 
 .section-lg {
   padding: 100px 0 !important;
+}
+
+.ftco-about ul.about-info {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.ftco-about ul.about-info li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.ftco-about ul.about-info li span {
+  width: calc(100% - 130px);
+}
+
+.ftco-about ul.about-info li span:first-child {
+  font-weight: 600;
+  /* color: #fff; */
+  width: 130px;
 }
