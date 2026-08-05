@@ -1,0 +1,20 @@
+{
+  "current": "1.0.0",
+  "released": "2026-08-05",
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-08-05",
+      "changes": [
+        "Initial release with modern design",
+        "Dynamic data loading from JSON",
+        "Admin panel with GitHub API integration",
+        "Offline mode for local testing",
+        "Sections: About, Skills, Education, Experience, Portfolio, Certificates, Contact",
+        "Multiple roles with typing animation",
+        "Image protection (disable save-as)",
+        "Responsive design"
+      ]
+    }
+  ]
+}

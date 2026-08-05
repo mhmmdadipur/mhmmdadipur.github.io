@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "profile": {
+    "name": "Muhammad Adi Purwanto",
+    "title": "Flutter Developer",
+    "subtitles": ["FLUTTER DEVELOPER"],
+    "avatar": "assets/imgs/man.png",
+    "bio": "I am a D3 graduate of Computer Engineering Study Program. I am a Flutter Developer who builds android and desktop based applications using the dart programming language.",
+    "info": {
+      "name": "Muhammad Adi Purwanto",
+      "dob": "January 26, 2001",
+      "address": "Lumajang, East Java, Indonesia",
+      "zip": "67316",
+      "email": "adi09450@gmail.com",
+      "phone": "+62 838-4783-1371"
+    },
+    "social": {
+      "github": "https://github.com/MhmmdAdipur",
+      "linkedin": "https://www.linkedin.com/in/muhammad-adi-p-5a4962127/",
+      "whatsapp": "https://wa.me/+6283847831371",
+      "instagram": "",
+      "twitter": "",
+      "facebook": "",
+      "youtube": ""
+    },
+    "cv_link": "https://bit.ly/cv-mhmmdadipur"
+  },
+  "education": [
+    {
+      "id": 1,
+      "institution": "State Vocational High School 1 Lumajang",
+      "degree": "Computer and Network Engineering",
+      "description": "Entered the Jember State Polytechnic in 2016 and graduated in 2019.",
+      "year_start": "2016",
+      "year_end": "2019",
+      "icon": "assets/imgs/pencil-case.svg"
+    },
+    {
+      "id": 2,
+      "institution": "State Polytechnic of Jember",
+      "degree": "Associate of Computer Engineering",
+      "description": "Entered the Jember State Polytechnic in 2019 and graduated in 2022, with a GPA of 3.88.",
+      "year_start": "2019",
+      "year_end": "2022",
+      "icon": "assets/imgs/pencil-case.svg"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "PT Indonesia Comnets Plus (ICON+)",
+      "position": "Enterprise IT Intern",
+      "period": "September 2021 - August 2022",
+      "description": "Monitor, check and record server data on a regular basis.",
+      "icon": "assets/imgs/analytics.svg"
+    },
+    {
+      "id": 2,
+      "company": "PT Satria Wiguna Sanjaya",
+      "position": "Freelance Flutter Programmer",
+      "period": "October 2021 - December 2021",
+      "description": "Added several new menus and features to the DPD Golkar application.",
+      "icon": "assets/imgs/responsive.svg"
+    },
+    {
+      "id": 3,
+      "company": "PT Mikra Mikro Investment (DEDiGO)",
+      "position": "Freelance Flutter Programmer",
+      "period": "September 2022 - October 2022",
+      "description": "Added several new menus to the DEDIGO application, and made webview applications.",
+      "icon": "assets/imgs/responsive.svg"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "SIKepusa",
+      "category": "Flutter Application",
+      "image": "assets/imgs/folio-1.jpg",
+      "link": "https://drive.google.com/file/d/1N0jaQIM2xCBiCcQ6p1UxOKO4jE1Wmgow/view?usp=share_link",
+      "description": "Library management system built with Flutter"
+    }
+  ],
+  "certificates": [
+    {
+      "id": 1,
+      "title": "Example Certificate",
+      "issuer": "Example Organization",
+      "date": "2022",
+      "image": "assets/imgs/folio-1.jpg",
+      "verify_link": "https://example.com/verify"
+    }
+  ],
+  "skills": [
+    { "name": "Flutter/Dart", "level": 90 },
+    { "name": "Android Development", "level": 80 },
+    { "name": "Desktop Application", "level": 75 },
+    { "name": "HTML/CSS/JS", "level": 70 },
+    { "name": "Git/GitHub", "level": 80 },
+    { "name": "Firebase", "level": 70 }
+  ]
+}

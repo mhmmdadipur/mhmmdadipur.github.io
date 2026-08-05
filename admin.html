@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel | Mhmmd.Adipur</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Admin Styles -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-card">
+            <h2><i class="ti-lock"></i> Admin Panel</h2>
+            <p class="text-muted mb-4">Enter your GitHub Personal Access Token to continue</p>
+            <div class="form-group">
+                <label for="github-token">GitHub Token</label>
+                <input type="password" class="form-control" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+                <small class="form-text text-muted">Token needs 'repo' scope. <a href="https://github.com/settings/tokens/new" target="_blank">Create one here</a></small>
+            </div>
+            <div class="form-group">
+                <label for="github-repo">Repository</label>
+                <input type="text" class="form-control" id="github-repo" placeholder="username/repo" value="MhmmdAdipur/mhmmdadipur.github.io">
+            </div>
+            <button class="btn btn-primary btn-block" id="btn-login">
+                <i class="ti-check mr-1"></i> Connect
+            </button>
+            <div class="divider" id="divider-offline">
+                <span>or</span>
+            </div>
+            <button class="btn btn-outline-secondary btn-block" id="btn-offline">
+                <i class="ti-desktop mr-1"></i> Offline Mode (Local Testing)
+            </button>
+            <small class="form-text text-muted text-center mt-2" id="offline-hint">Offline mode loads data.json locally. Changes saved to localStorage only.</small>
+            <div id="login-error" class="alert alert-danger mt-3 d-none"></div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="d-none">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <div class="sidebar-header">
+                <h4>Admin Panel</h4>
+                <small class="text-muted" id="repo-name"></small>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="profile"><i class="ti-user"></i> Profile</a>
+                <a href="#" class="nav-item" data-section="education"><i class="ti-pencil-alt"></i> Education</a>
+                <a href="#" class="nav-item" data-section="experience"><i class="ti-briefcase"></i> Experience</a>
+                <a href="#" class="nav-item" data-section="portfolio"><i class="ti-gallery"></i> Portfolio</a>
+                <a href="#" class="nav-item" data-section="certificates"><i class="ti-medall"></i> Certificates</a>
+                <a href="#" class="nav-item" data-section="skills"><i class="ti-bar-chart"></i> Skills</a>
+                <a href="#" class="nav-item" data-section="versioning"><i class="ti-tag"></i> Versioning</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-sm btn-outline-danger btn-block" id="btn-logout"><i class="ti-power-off mr-1"></i> Disconnect</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-content">
+            <!-- Top Bar -->
+            <div class="admin-topbar">
+                <button class="btn btn-sm d-md-none" id="btn-toggle-sidebar"><i class="ti-menu"></i></button>
+                <div class="topbar-actions">
+                    <span class="badge badge-info" id="version-display"></span>
+                    <span class="badge badge-success ml-2" id="status-badge">Connected</span>
+                    <button class="btn btn-primary btn-sm ml-2" id="btn-save-all">
+                        <i class="ti-save mr-1"></i> Save & Push
+                    </button>
+                    <a href="index.html" target="_blank" class="btn btn-outline-secondary btn-sm ml-2">
+                        <i class="ti-eye mr-1"></i> View Site
+                    </a>
+                </div>
+            </div>
+
+            <!-- Content Sections -->
+            <div class="admin-main">
+                <!-- Profile Section -->
+                <div class="content-section active" id="section-profile">
+                    <h3>Profile Settings</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" class="form-control" id="profile-name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Titles / Roles (comma separated)</label>
+                                        <input type="text" class="form-control" id="profile-title" placeholder="FLUTTER DEVELOPER, WEB DEVELOPER">
+                                        <small class="form-text text-muted">Separate multiple roles with comma. Will show as typing animation.</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Avatar Image</label>
+                                        <div class="image-upload-wrapper">
+                                            <div class="image-preview-box" id="profile-avatar-preview">
+                                                <img src="assets/imgs/man.png" alt="Avatar">
+                                            </div>
+                                            <div class="image-upload-actions">
+                                                <input type="file" id="profile-avatar-file" accept="image/jpeg,image/png,image/webp,image/gif" class="d-none">
+                                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="document.getElementById('profile-avatar-file').click()">
+                                                    <i class="ti-upload mr-1"></i> Upload Avatar
+                                                </button>
+                                                <input type="text" class="form-control mt-2" id="profile-avatar" placeholder="assets/imgs/man.png">
+                                                <small class="form-text text-muted">Max 2MB. JPG, PNG, WebP.</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>CV Link</label>
+                                        <input type="url" class="form-control" id="profile-cv">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Bio</label>
+                                        <textarea class="form-control" id="profile-bio" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" class="form-control" id="profile-email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control" id="profile-phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" id="profile-address">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Date of Birth</label>
+                                        <input type="text" class="form-control" id="profile-dob">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <h5 class="mb-3">Social Media</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>GitHub URL</label>
+                                        <input type="url" class="form-control" id="profile-github">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>LinkedIn URL</label>
+                                        <input type="url" class="form-control" id="profile-linkedin">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Instagram URL</label>
+                                        <input type="url" class="form-control" id="profile-instagram">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Twitter / X URL</label>
+                                        <input type="url" class="form-control" id="profile-twitter">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Facebook URL</label>
+                                        <input type="url" class="form-control" id="profile-facebook">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>YouTube URL</label>
+                                        <input type="url" class="form-control" id="profile-youtube">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="content-section" id="section-education">
+                    <div class="section-header">
+                        <h3>Education</h3>
+                        <button class="btn btn-primary btn-sm" id="btn-add-education">
+                            <i class="ti-plus mr-1"></i> Add Education
+                        </button>
+                    </div>
+                    <div id="education-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="content-section" id="section-experience">
+                    <div class="section-header">
+                        <h3>Experience</h3>
+                        <button class="btn btn-primary btn-sm" id="btn-add-experience">
+                            <i class="ti-plus mr-1"></i> Add Experience
+                        </button>
+                    </div>
+                    <div id="experience-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Portfolio Section -->
+                <div class="content-section" id="section-portfolio">
+                    <div class="section-header">
+                        <h3>Portfolio</h3>
+                        <button class="btn btn-primary btn-sm" id="btn-add-portfolio">
+                            <i class="ti-plus mr-1"></i> Add Portfolio
+                        </button>
+                    </div>
+                    <div id="portfolio-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="content-section" id="section-skills">
+                    <div class="section-header">
+                        <h3>Skills</h3>
+                        <button class="btn btn-primary btn-sm" id="btn-add-skill">
+                            <i class="ti-plus mr-1"></i> Add Skill
+                        </button>
+                    </div>
+                    <div id="skills-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Certificates Section -->
+                <div class="content-section" id="section-certificates">
+                    <div class="section-header">
+                        <h3>Certificates</h3>
+                        <button class="btn btn-primary btn-sm" id="btn-add-certificate">
+                            <i class="ti-plus mr-1"></i> Add Certificate
+                        </button>
+                    </div>
+                    <div id="certificates-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Versioning Section -->
+                <div class="content-section" id="section-versioning">
+                    <div class="section-header">
+                        <h3>Versioning</h3>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Current Version</label>
+                                        <input type="text" class="form-control" id="version-current" placeholder="1.0.0">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Bump Version</label>
+                                        <div class="btn-group-version">
+                                            <button class="btn btn-sm btn-outline-primary" id="btn-bump-patch">Patch (x.x.+1)</button>
+                                            <button class="btn btn-sm btn-outline-primary" id="btn-bump-minor">Minor (x.+1.0)</button>
+                                            <button class="btn btn-sm btn-outline-primary" id="btn-bump-major">Major (+1.0.0)</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <div class="form-group">
+                                        <label>Release Notes (for this version)</label>
+                                        <textarea class="form-control" id="version-notes" rows="3" placeholder="Describe what changed in this version..."></textarea>
+                                        <small class="form-text text-muted">One change per line. Will be saved to changelog.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mb-3">Changelog</h5>
+                    <div id="changelog-list" class="items-list">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for editing items -->
+    <div class="modal" id="editModal">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Item</h5>
+                    <button type="button" class="close" id="modal-close-btn" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Dynamic form fields -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="btn-modal-save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast-container">
+        <div id="toast" class="toast-notification d-none">
+            <span id="toast-message"></span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>
