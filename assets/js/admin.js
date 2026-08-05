@@ -29,14 +29,18 @@
         this.innerHTML = '<i class="ti-reload ti-spin mr-1"></i> Connecting...';
 
         try {
+            // Set token first so API calls work
+            githubToken = token;
+            repoFullName = repo;
+
             // Verify token by fetching repo info
             const response = await githubAPI('GET', `/repos/${repo}`);
             if (!response.ok) {
+                githubToken = '';
+                repoFullName = '';
                 throw new Error('Invalid token or repository not found');
             }
 
-            githubToken = token;
-            repoFullName = repo;
             isOfflineMode = false;
 
             // Save to sessionStorage (cleared on browser close)
@@ -50,6 +54,8 @@
             // Show dashboard
             showDashboard(repo, false);
         } catch (error) {
+            githubToken = '';
+            repoFullName = '';
             showLoginError(error.message);
         } finally {
             this.disabled = false;
