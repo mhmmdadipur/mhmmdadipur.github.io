@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#f0f0f0"/>
+  <rect x="10" y="10" width="580" height="380" fill="none" stroke="#ddd" stroke-width="2" stroke-dasharray="8,4" rx="8"/>
+  <g transform="translate(300,180)">
+    <rect x="-40" y="-30" width="80" height="60" fill="none" stroke="#bbb" stroke-width="3" rx="4"/>
+    <circle cx="0" cy="-5" r="12" fill="none" stroke="#bbb" stroke-width="2.5"/>
+    <polygon points="-30,25 -10,-5 5,10 15,2 30,25" fill="#ddd"/>
+    <circle cx="-20" cy="-15" r="5" fill="#ddd"/>
+  </g>
+  <text x="300" y="260" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#999">No Image Available</text>
+</svg>

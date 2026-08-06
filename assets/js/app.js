@@ -217,15 +217,17 @@
 
         var limit = 6;
         var showing = Math.min(limit, portfolio.length);
+        var placeholder = 'assets/imgs/placeholder.svg';
 
         function renderItems(count) {
             let html = '';
             for (var i = 0; i < count && i < portfolio.length; i++) {
                 var item = portfolio[i];
+                var imgSrc = item.image ? escapeHtml(item.image) : placeholder;
                 html += `
                     <div class="col-md-4 mb-4">
                         <a href="${escapeHtml(item.link)}" class="portfolio-card" target="_blank" rel="noopener noreferrer">
-                            <img src="${escapeHtml(item.image)}" class="portfolio-card-img" alt="${escapeHtml(item.title)}">
+                            <img src="${imgSrc}" class="portfolio-card-img" alt="${escapeHtml(item.title)}">
                             <span class="portfolio-card-overlay">
                                 <span class="portfolio-card-caption">
                                     <h4>${escapeHtml(item.title)}</h4>
@@ -262,23 +264,26 @@
         }
 
         var limit = 6;
+        var placeholder = 'assets/imgs/placeholder.svg';
 
         function renderItems(count) {
             let html = '';
             for (var i = 0; i < count && i < certificates.length; i++) {
                 var item = certificates[i];
+                var imgSrc = item.image ? escapeHtml(item.image) : placeholder;
+                var verifyBtn = (item.verify_link && item.verify_link.trim() !== '') ? `<a href="${escapeHtml(item.verify_link)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary mt-3 d-block"><i class="ti-check mr-1"></i>Verify</a>` : '';
                 html += `
                     <div class="col-md-4 mb-4">
                         <div class="certificate-card">
                             <div class="certificate-img-holder img-protect">
-                                <img src="${escapeHtml(item.image)}" class="certificate-img no-save" alt="${escapeHtml(item.title)}" draggable="false">
+                                <img src="${imgSrc}" class="certificate-img no-save" alt="${escapeHtml(item.title)}" draggable="false">
                                 <div class="img-protect-overlay"></div>
                             </div>
                             <div class="certificate-body">
                                 <h5 class="certificate-title">${escapeHtml(item.title)}</h5>
                                 <p class="certificate-issuer">${escapeHtml(item.issuer)}</p>
                                 <small class="text-muted">${escapeHtml(item.date)}</small>
-                                ${item.verify_link ? `<a href="${escapeHtml(item.verify_link)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary mt-3 d-block"><i class="ti-check mr-1"></i>Verify</a>` : ''}
+                                ${verifyBtn}
                             </div>
                         </div>
                     </div>

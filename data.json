@@ -6,7 +6,7 @@
     "subtitles": [
       "FLUTTER DEVELOPER"
     ],
-    "avatar": "assets/imgs/man.png",
+    "avatar": "assets/imgs/man.jpg",
     "bio": "I am a D3 graduate of Computer Engineering Study Program. I am a Flutter Developer who builds android and desktop based applications using the dart programming language.",
     "info": {
       "name": "Muhammad Adi Purwanto",
@@ -135,11 +135,43 @@
   "certificates": [
     {
       "id": 1,
-      "title": "Example Certificate",
-      "issuer": "Example Organization",
+      "title": "Belajar Prinsip Pemrograman SOLID",
+      "issuer": "Dicoding Indonesia",
       "date": "2022",
-      "image": "assets/imgs/folio-1.jpg",
-      "verify_link": "https://example.com/verify"
+      "image": "assets/imgs/Sertifikat Kompetensi Belajar Prinsip Pemrograman SOLID_page-0001.jpg",
+      "verify_link": ""
+    },
+    {
+      "id": 2,
+      "title": "Memulai Pemrograman Dengan Dart",
+      "issuer": "Dicoding Indonesia",
+      "date": "2022",
+      "image": "assets/imgs/Sertifikat Kompetensi Memulai Pemrograman Dengan Dart_page-0001.jpg",
+      "verify_link": ""
+    },
+    {
+      "id": 3,
+      "title": "Belajar Membuat Aplikasi Flutter untuk Pemula",
+      "issuer": "Dicoding Indonesia",
+      "date": "2022",
+      "image": "assets/imgs/Sertifikat Kompetensi Belajar Membuat Aplikasi Flutter untuk Pemula_page-0001.jpg",
+      "verify_link": ""
+    },
+    {
+      "id": 4,
+      "title": "Flutter Apps Development - Membuat Aplikasi Cari Kos",
+      "issuer": "BuildWith Angga",
+      "date": "2022",
+      "image": "assets/imgs/Sertifikat Kelulusan Flutter Apps Development Membuat Aplikasi Cari Kos-_page-0001.jpg",
+      "verify_link": ""
+    },
+    {
+      "id": 5,
+      "title": "Dart & Flutter Development Bootcamp",
+      "issuer": "BuildWith Angga",
+      "date": "2022",
+      "image": "assets/imgs/Sertifikat kelulusan Dart & Flutter Development Bootcamp_page-0001.jpg",
+      "verify_link": ""
     }
   ],
   "skills": [
