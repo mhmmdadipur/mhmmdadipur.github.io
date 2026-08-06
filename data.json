@@ -113,7 +113,23 @@
       "category": "Flutter Application",
       "image": "assets/imgs/folio-1.jpg",
       "link": "https://drive.google.com/file/d/1N0jaQIM2xCBiCcQ6p1UxOKO4jE1Wmgow/view?usp=share_link",
-      "description": "Library management system built with Flutter"
+      "description": "Sikepusa is the official learning reporting application for SD Kepuharjo 1 students. Easily submit your home-learning assignments without worrying about running out of phone storage. Say goodbye to cluttered WhatsApp chats and full galleries—all of your homework data is safely stored on our cloud server, keeping your device's memory completely free and optimized."
+    },
+    {
+      "id": 2,
+      "title": "Serviz ID Customer",
+      "category": "Shopping",
+      "description": "Serviz ID is a complete solution to connect users with professional service providers in various fields, such as construction, home repair, painting, electrical installation, plumbing, and many more. This application is designed to make it easier for users to find and hire the services they need quickly, safely and reliably.",
+      "image": "assets/imgs/folio-1.jpg",
+      "link": "https://play.google.com/store/apps/details?id=id.serviz.customer"
+    },
+    {
+      "id": 3,
+      "title": "Serviz ID Partner",
+      "category": "Shopping",
+      "description": "Serviz ID Partner is a dedicated platform for service providers to offer, manage and develop their services. Through this application, partners can easily reach more customers, manage work schedules, monitor income, and increase service professionalism.",
+      "image": "assets/imgs/folio-1.jpg",
+      "link": "https://play.google.com/store/apps/details?id=id.serviz.partner"
     }
   ],
   "certificates": [
@@ -129,15 +145,15 @@
   "skills": [
     {
       "name": "Flutter/Dart",
-      "level": 90
+      "level": 95
     },
     {
       "name": "Android Development",
-      "level": 80
+      "level": 90
     },
     {
       "name": "Desktop Application",
-      "level": 75
+      "level": 85
     },
     {
       "name": "HTML/CSS/JS",
@@ -149,7 +165,11 @@
     },
     {
       "name": "Firebase",
-      "level": 70
+      "level": 85
+    },
+    {
+      "name": "Laravel",
+      "level": 60
     }
   ]
 }
