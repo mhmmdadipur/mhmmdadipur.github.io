@@ -3,7 +3,9 @@
   "profile": {
     "name": "Muhammad Adi Purwanto",
     "title": "Flutter Developer",
-    "subtitles": ["FLUTTER DEVELOPER"],
+    "subtitles": [
+      "FLUTTER DEVELOPER"
+    ],
     "avatar": "assets/imgs/man.png",
     "bio": "I am a D3 graduate of Computer Engineering Study Program. I am a Flutter Developer who builds android and desktop based applications using the dart programming language.",
     "info": {
@@ -23,7 +25,8 @@
       "facebook": "",
       "youtube": ""
     },
-    "cv_link": "https://bit.ly/cv-mhmmdadipur"
+    "cv_link": "https://bit.ly/cv-mhmmdadipur",
+    "subtitle": "FLUTTER DEVELOPER"
   },
   "education": [
     {
@@ -51,23 +54,55 @@
       "company": "PT Indonesia Comnets Plus (ICON+)",
       "position": "Enterprise IT Intern",
       "period": "September 2021 - August 2022",
-      "description": "Monitor, check and record server data on a regular basis.",
+      "description": "Conduct periodic monitoring and inspections of server operational viability to ensure system stability.",
       "icon": "assets/imgs/analytics.svg"
     },
     {
       "id": 2,
       "company": "PT Satria Wiguna Sanjaya",
-      "position": "Freelance Flutter Programmer",
+      "position": "Flutter Programmer (Freelance)",
       "period": "October 2021 - December 2021",
-      "description": "Added several new menus and features to the DPD Golkar application.",
+      "description": "Mengembangkan modul baru pada aplikasi DPD Golkar (aspirasi rakyat & registrasi kader). Mengoptimalkan UI/UX dengan fitur pagination, pengunduhan, dan pull-to-refresh.",
       "icon": "assets/imgs/responsive.svg"
     },
     {
       "id": 3,
       "company": "PT Mikra Mikro Investment (DEDiGO)",
-      "position": "Freelance Flutter Programmer",
+      "position": "Flutter Programmer (Freelance)",
       "period": "September 2022 - October 2022",
-      "description": "Added several new menus to the DEDIGO application, and made webview applications.",
+      "description": "Integrating PPOB modules and an article portal into the DEDiGO application. Designing and deploying WebView-based applications for Global Halal Hub, Intani Fresh, and Wakaf MUI services.",
+      "icon": "assets/imgs/responsive.svg"
+    },
+    {
+      "id": 4,
+      "company": "CV Pilarmedia Indonesia",
+      "position": "Flutter Programmer",
+      "period": "December 2022 - October 2024",
+      "description": "Dispatch & Driver System: Developing a logistics driver management application (order status, tagging-based Proof of Delivery, location tracking).\nMaintenance System: Building an application for vehicle issue reporting and routine inspections (checksheets).\nLogistics Operations System: Designing Gate/Security and Tally/Checker applications to oversee loading and unloading activities.\nInternal & Customer Systems: Developing client-facing applications (orders & catalogs) as well as internal HR applications (attendance, work-hour tracking, task management).",
+      "icon": "assets/imgs/responsive.svg"
+    },
+    {
+      "id": 5,
+      "company": "PT Karya Indah Buana (KIB)",
+      "position": "Mobile Developer (Freelance)",
+      "period": "May 2025 - October 2025",
+      "description": "Logistics Application Development: Designed and built new applications from scratch to facilitate company operations—specifically, the KIB Driver app (for driver management) and the KIB Tally app (for monitoring cargo loading and unloading).\nSystem Maintenance & Debugging: Conducted routine application stability monitoring, issue analysis, and bug fixing to ensure smooth daily logistics operations.",
+      "icon": "assets/imgs/responsive.svg"
+    },
+    {
+      "id": 6,
+      "company": "Service ID",
+      "position": "Mobile Developer (Freelance)",
+      "period": "January 2025 - September 2025",
+      "description": "Service Rental Platform Application Development: End-to-end design and development of two mobile applications—one for clients (service users) and a dedicated app for partners (service providers).\nPayment Gateway Integration: Implementation of a secure, automated digital payment system to facilitate seamless service rental transactions within the application.\nInterface Implementation (UI/UX Slicing): Precise, pixel-perfect conversion of visual designs into code to ensure the final application aligns with client expectations and specifications.\nSystem Maintenance & Debugging: Monitoring application stability and performing responsive bug fixes to maintain quality and performance for both clients and service providers.",
+      "icon": "assets/imgs/responsive.svg"
+    },
+    {
+      "id": 7,
+      "company": "PT Fortress Data Services",
+      "position": "Mobile Developer",
+      "period": "November 2024 - Now",
+      "description": "System Development & Integration (Bank Ganesha): Performed UI slicing, API integration, and translated business flows into system functions for banking features (TapCash, PBB tax payments, Debit ATM management, Cardless Cash Withdrawal, and Quick Transactions).\n\"New Bangga\" Project Implementation: Developed application features for the Maspion \"New Bangga\" project in accordance with Business Requirement Documents (BRD) and Change Request (CR) documentation.\nSystem Security & Code Quality: Ensured data security standards by mitigating findings from Security Penetration Testing (Pentest), implementing Unit Testing, and maintaining clean code quality using Flutter Analyze.\nMaintenance & Issue Resolution: Conducted operational maintenance—including bug fixing and technical adjustments—responsively based on SLAs and incoming tickets from the bank.\nCross-Project Support & UI Slicing: Executed precise UI/UX slicing for Bank Gamon application features and provided technical support to other banking clients, such as CMB Ganesha and Djoting.",
       "icon": "assets/imgs/responsive.svg"
     }
   ],
@@ -92,11 +127,29 @@
     }
   ],
   "skills": [
-    { "name": "Flutter/Dart", "level": 90 },
-    { "name": "Android Development", "level": 80 },
-    { "name": "Desktop Application", "level": 75 },
-    { "name": "HTML/CSS/JS", "level": 70 },
-    { "name": "Git/GitHub", "level": 80 },
-    { "name": "Firebase", "level": 70 }
+    {
+      "name": "Flutter/Dart",
+      "level": 90
+    },
+    {
+      "name": "Android Development",
+      "level": 80
+    },
+    {
+      "name": "Desktop Application",
+      "level": 75
+    },
+    {
+      "name": "HTML/CSS/JS",
+      "level": 70
+    },
+    {
+      "name": "Git/GitHub",
+      "level": 80
+    },
+    {
+      "name": "Firebase",
+      "level": 70
+    }
   ]
 }
